@@ -41,13 +41,20 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let topImg = document.getElementById("cta-img");
-topImg.setAttribute('src', siteContent["cta"]["img-src"])
+let topImg = document.getElementById("cta-img"); // gets an ID //
+topImg.setAttribute('src', siteContent["cta"]["img-src"]) // changes the src using siteContent from 'cta' object 'img-src' propterty //
 
 let mainTitle = document.querySelector('.cta h1'); //specificity is important, must reference class -> child //
 mainTitle.textContent = siteContent ["cta"]["h1"]; // add textContent using the siteContent provided // 
 
 let mainButton = document.querySelector('.cta button'); // just like before .class child
 mainButton.textContent = siteContent["cta"]["button"];
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+
+
 
 
