@@ -45,7 +45,7 @@ let topImg = document.getElementById("cta-img"); // gets an ID //
 topImg.setAttribute('src', siteContent["cta"]["img-src"]) // changes the src using siteContent from 'cta' object 'img-src' propterty //
 // setAttribute can't be used for textcontent // 
 let mainTitle = document.querySelector('.cta h1'); //specificity is important, must reference class -> child //
-mainTitle.textContent = siteContent ["cta"]["h1"]; // adds textContent using the siteContent provided // 
+mainTitle.innerHTML = siteContent ["cta"]["h1"].replace(/ /g, '<br>');// adds textContent using the siteContent provided // 
 
 let mainButton = document.querySelector('.cta button'); // just like before .class child
 mainButton.textContent = siteContent["cta"]["button"];
