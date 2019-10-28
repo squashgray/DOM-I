@@ -43,9 +43,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let topImg = document.getElementById("cta-img"); // gets an ID //
 topImg.setAttribute('src', siteContent["cta"]["img-src"]) // changes the src using siteContent from 'cta' object 'img-src' propterty //
-
+// setAttribute can't be used for textcontent // 
 let mainTitle = document.querySelector('.cta h1'); //specificity is important, must reference class -> child //
-mainTitle.textContent = siteContent ["cta"]["h1"]; // add textContent using the siteContent provided // 
+mainTitle.textContent = siteContent ["cta"]["h1"]; // adds textContent using the siteContent provided // 
 
 let mainButton = document.querySelector('.cta button'); // just like before .class child
 mainButton.textContent = siteContent["cta"]["button"];
@@ -53,7 +53,7 @@ mainButton.textContent = siteContent["cta"]["button"];
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-//nav A tags //
+//nav a tags //
 let navA = document.querySelectorAll('a'); // used selector all to make 'array like' node list //
 navA[0].textContent= siteContent["nav"]["nav-item-1"];  // select each item indiviually using bracket notation [0] to access its place in the node list // 
 navA[1].textContent= siteContent["nav"]["nav-item-2"];  
@@ -69,6 +69,12 @@ navA[3].style.color= '#b0b0b0';
 navA[4].style.color= '#b0b0b0';
 navA[5].style.color= '#b0b0b0';
 
+let hfours = document.querySelectorAll('h4') // like the a tags, selects all the h4's and makes a node list //
+hfours[0].textContent= siteContent["main-content"]["features-h4"]; // important to have everything in the correct order //
+hfours[1].textContent= siteContent["main-content"]["about-h4"];
+hfours[2].textContent= siteContent["main-content"]["services-h4"];
+hfours[3].textContent= siteContent["main-content"]["product-h4"];
+hfours[4].textContent= siteContent["main-content"]["vision-h4"];
 
 
 
