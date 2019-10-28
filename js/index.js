@@ -62,12 +62,12 @@ navA[3].textContent= siteContent["nav"]["nav-item-4"];
 navA[4].textContent= siteContent["nav"]["nav-item-5"];
 navA[5].textContent= siteContent["nav"]["nav-item-6"];
 
-navA[0].style.color= '#b0b0b0'; // same for text color // 
-navA[1].style.color= '#b0b0b0';
-navA[2].style.color= '#b0b0b0';
-navA[3].style.color= '#b0b0b0';
-navA[4].style.color= '#b0b0b0';
-navA[5].style.color= '#b0b0b0';
+navA[0].style.color= 'green'; // same for text color // 
+navA[1].style.color= 'green';
+navA[2].style.color= 'green';
+navA[3].style.color= 'green';
+navA[4].style.color= 'green';
+navA[5].style.color= 'green';
 
 let hfours = document.querySelectorAll('h4') // like the a tags, selects all the h4's and makes a node list //
 hfours[0].textContent= siteContent["main-content"]["features-h4"]; // important to have everything in the correct order //
