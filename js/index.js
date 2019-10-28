@@ -77,7 +77,7 @@ hfours[2].textContent= siteContent["main-content"]["services-h4"];
 hfours[3].textContent= siteContent["main-content"]["product-h4"];
 hfours[4].textContent= siteContent["main-content"]["vision-h4"];
 // main content p // 
-let mainContent = document.querySelectorAll('.text-content > p'); // > selects the direct children of the element (.text-content), otherwise it selects the <p>'s from contact section //
+let mainContent = document.querySelectorAll('.text-content p'); // > selects the direct children of the element (.text-content), otherwise it selects the <p>'s from contact section //
 mainContent[0].textContent= siteContent["main-content"]["features-content"]; // same story be specific //
 mainContent[1].textContent= siteContent["main-content"]["about-content"];
 mainContent[2].textContent= siteContent["main-content"]["services-content"];
@@ -103,10 +103,11 @@ cookies.style.color= "green";
 
 nav.append(cookies); 
 
-let contactTitle = document.querySelector('section.contact h4');
+//contact section //
+let contactTitle = document.querySelector('.contact h4');
 contactTitle.textContent = siteContent.contact['contact-h4'];
 
-let contactP = document.querySelectorAll('.contact > p');
+let contactP = document.querySelectorAll('.contact p');
 contactP[0].textContent= siteContent["contact"]['address'];
 contactP[1].textContent= siteContent["contact"]['phone'];
 contactP[2].textContent= siteContent["contact"]['email']; 
