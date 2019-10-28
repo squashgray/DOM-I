@@ -53,6 +53,22 @@ mainButton.textContent = siteContent["cta"]["button"];
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+//nav A tags //
+let navA = document.querySelectorAll('a'); // used selector all to make 'array like' node list //
+navA[0].textContent= siteContent["nav"]["nav-item-1"];  // select each item indiviually using bracket notation [0] to access its place in the node list // 
+navA[1].textContent= siteContent["nav"]["nav-item-2"];  
+navA[2].textContent= siteContent["nav"]["nav-item-3"];
+navA[3].textContent= siteContent["nav"]["nav-item-4"];
+navA[4].textContent= siteContent["nav"]["nav-item-5"];
+navA[5].textContent= siteContent["nav"]["nav-item-6"];
+
+navA[0].style.color= '#b0b0b0'; // same for text color // 
+navA[1].style.color= '#b0b0b0';
+navA[2].style.color= '#b0b0b0';
+navA[3].style.color= '#b0b0b0';
+navA[4].style.color= '#b0b0b0';
+navA[5].style.color= '#b0b0b0';
+
 
 
 
