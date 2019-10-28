@@ -84,8 +84,11 @@ mainContent[2].textContent= siteContent["main-content"]["services-content"];
 mainContent[3].textContent= siteContent["main-content"]["product-content"];
 mainContent[4].textContent= siteContent["main-content"]["vision-content"];
 
+ 
 let nav = document.querySelector('nav'); // lets me use nav to append, prepend //
 
+
+// new nav a tags //
 let home = document.createElement("a"); //create an a tag //
 home.innerText = "Main"; //sets the content on the a tag //
 home.href = "#"; //makes it a link // 
@@ -94,13 +97,21 @@ home.style.color= "green"; // changes the color //
 nav.prepend(home); //prepend to the nav variable //
 
 let cookies = document.createElement("a");
-cookies.innerHTML = "Cookies";
+cookies.innerText = "Cookies";
 cookies.href = "#"
 cookies.style.color= "green";
 
 nav.append(cookies); 
 
+let contactTitle = document.querySelector('section.contact h4');
+contactTitle.textContent = siteContent.contact['contact-h4'];
 
+let contactP = document.querySelectorAll('.contact > p');
+contactP[0].textContent= siteContent["contact"]['address'];
+contactP[1].textContent= siteContent["contact"]['phone'];
+contactP[2].textContent= siteContent["contact"]['email']; 
+
+console.log(contactP);
 
 
 
