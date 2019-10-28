@@ -44,8 +44,10 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let topImg = document.getElementById("cta-img");
 topImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-const mainTitle = document.querySelector("h1");
-mainTitle.setAttribute('h1', siteContent["h1"]["h1"])
+let mainTitle = document.querySelector('.cta h1'); //specificity is important, must reference class -> child //
+mainTitle.textContent = siteContent ["cta"]["h1"]; // add textContent using the siteContent provided // 
 
+let mainButton = document.querySelector('.cta button'); // just like before .class child
+mainButton.textContent = siteContent["cta"]["button"];
 
 
