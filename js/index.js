@@ -69,12 +69,22 @@ navA[3].style.color= 'green';
 navA[4].style.color= 'green';
 navA[5].style.color= 'green';
 
+// main h4 titles //
 let hfours = document.querySelectorAll('h4') // like the a tags, selects all the h4's and makes a node list //
 hfours[0].textContent= siteContent["main-content"]["features-h4"]; // important to have everything in the correct order //
 hfours[1].textContent= siteContent["main-content"]["about-h4"];
 hfours[2].textContent= siteContent["main-content"]["services-h4"];
 hfours[3].textContent= siteContent["main-content"]["product-h4"];
 hfours[4].textContent= siteContent["main-content"]["vision-h4"];
+// main content p // 
+let mainContent = document.querySelectorAll('.text-content > p'); // > selects the direct children of the element (.text-content), otherwise it selects the <p>'s from contact section //
+mainContent[0].textContent= siteContent["main-content"]["features-content"]; // same story be specific //
+mainContent[1].textContent= siteContent["main-content"]["about-content"];
+mainContent[2].textContent= siteContent["main-content"]["services-content"];
+mainContent[3].textContent= siteContent["main-content"]["product-content"];
+mainContent[4].textContent= siteContent["main-content"]["vision-content"];
+console.log(mainContent);
+
 
 
 
