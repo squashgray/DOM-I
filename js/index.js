@@ -83,7 +83,23 @@ mainContent[1].textContent= siteContent["main-content"]["about-content"];
 mainContent[2].textContent= siteContent["main-content"]["services-content"];
 mainContent[3].textContent= siteContent["main-content"]["product-content"];
 mainContent[4].textContent= siteContent["main-content"]["vision-content"];
-console.log(mainContent);
+
+let nav = document.querySelector('nav'); // lets me use nav to append, prepend //
+
+let home = document.createElement("a"); //create an a tag //
+home.innerText = "Main"; //sets the content on the a tag //
+home.href = "#"; //makes it a link // 
+home.style.color= "green"; // changes the color //
+
+nav.prepend(home); //prepend to the nav variable //
+
+let cookies = document.createElement("a");
+cookies.innerHTML = "Cookies";
+cookies.href = "#"
+cookies.style.color= "green";
+
+nav.append(cookies); 
+
 
 
 
