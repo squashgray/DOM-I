@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street </br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,87 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let topImg = document.getElementById("cta-img"); // gets an ID //
+topImg.setAttribute('src', siteContent["cta"]["img-src"]) // changes the src using siteContent from 'cta' object 'img-src' propterty //
+// setAttribute can't be used for textcontent // 
+let mainTitle = document.querySelector('.cta h1'); //specificity is important, must reference class -> child //
+mainTitle.innerHTML = siteContent ["cta"]["h1"].replace(/ /g, '<br>');// adds textContent using the siteContent provided // 
+
+let mainButton = document.querySelector('.cta button'); // just like before .class child
+mainButton.textContent = siteContent["cta"]["button"];
+
+let midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//nav a tags //
+let navA = document.querySelectorAll('a'); // used selector all to make 'array like' node list //
+navA[0].textContent= siteContent["nav"]["nav-item-1"];  // select each item indiviually using bracket notation [0] to access its place in the node list // 
+navA[1].textContent= siteContent["nav"]["nav-item-2"];  
+navA[2].textContent= siteContent["nav"]["nav-item-3"];
+navA[3].textContent= siteContent["nav"]["nav-item-4"];
+navA[4].textContent= siteContent["nav"]["nav-item-5"];
+navA[5].textContent= siteContent["nav"]["nav-item-6"];
+
+// forEach on node list is more efficent //
+navA.forEach( element => {
+  element.style.color = "green"; 
+});
+
+// navA[0].style.color= 'green'; // same for text color // 
+// navA[1].style.color= 'green';
+// navA[2].style.color= 'green';
+// navA[3].style.color= 'green';
+// navA[4].style.color= 'green';
+// navA[5].style.color= 'green';
+
+// main h4 titles //
+let hfours = document.querySelectorAll('h4') // like the a tags, selects all the h4's and makes a node list //
+hfours[0].textContent= siteContent["main-content"]["features-h4"]; // important to have everything in the correct order //
+hfours[1].textContent= siteContent["main-content"]["about-h4"];
+hfours[2].textContent= siteContent["main-content"]["services-h4"];
+hfours[3].textContent= siteContent["main-content"]["product-h4"];
+hfours[4].textContent= siteContent["main-content"]["vision-h4"];
+// main content p // 
+let mainContent = document.querySelectorAll('.text-content p'); // > selects the direct children of the element (.text-content), otherwise it selects the <p>'s from contact section //
+mainContent[0].textContent= siteContent["main-content"]["features-content"]; // same story be specific //
+mainContent[1].textContent= siteContent["main-content"]["about-content"];
+mainContent[2].textContent= siteContent["main-content"]["services-content"];
+mainContent[3].textContent= siteContent["main-content"]["product-content"];
+mainContent[4].textContent= siteContent["main-content"]["vision-content"];
+
+ 
+let nav = document.querySelector('nav'); // lets me use nav to append, prepend //
+
+
+// new nav a tags //
+let home = document.createElement("a"); //create an a tag //
+home.innerText = "Main"; //sets the content on the a tag //
+home.href = "#"; //makes it a link // 
+home.style.color= "green"; // changes the color //
+
+nav.prepend(home); //prepend to the nav variable //
+
+let cookies = document.createElement("a");
+cookies.innerText = "Cookies";
+cookies.href = "#"
+cookies.style.color= "green";
+
+nav.appendChild(cookies); 
+
+//contact section //
+let contactTitle = document.querySelector('.contact h4');
+contactTitle.textContent = siteContent.contact['contact-h4'];
+
+let contactP = document.querySelectorAll('.contact p');
+contactP[0].innerHTML= siteContent["contact"]['address'];
+contactP[1].textContent= siteContent["contact"]['phone'];
+contactP[2].textContent= siteContent["contact"]['email']; 
+
+console.log(contactP);
+
+let foots = document.querySelector('footer');
+foots.textContent = siteContent["footer"]["copyright"];
+
+
+
