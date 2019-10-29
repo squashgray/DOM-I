@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street </br> Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -62,7 +62,7 @@ navA[3].textContent= siteContent["nav"]["nav-item-4"];
 navA[4].textContent= siteContent["nav"]["nav-item-5"];
 navA[5].textContent= siteContent["nav"]["nav-item-6"];
 
-
+// forEach on node list is more efficent //
 navA.forEach( element => {
   element.style.color = "green"; 
 });
@@ -106,20 +106,21 @@ cookies.innerText = "Cookies";
 cookies.href = "#"
 cookies.style.color= "green";
 
-nav.append(cookies); 
+nav.appendChild(cookies); 
 
 //contact section //
 let contactTitle = document.querySelector('.contact h4');
 contactTitle.textContent = siteContent.contact['contact-h4'];
 
 let contactP = document.querySelectorAll('.contact p');
-contactP[0].textContent= siteContent["contact"]['address'];
+contactP[0].innerHTML= siteContent["contact"]['address'];
 contactP[1].textContent= siteContent["contact"]['phone'];
 contactP[2].textContent= siteContent["contact"]['email']; 
 
 console.log(contactP);
 
-
+let foots = document.querySelector('footer');
+foots.textContent = siteContent["footer"]["copyright"];
 
 
 
